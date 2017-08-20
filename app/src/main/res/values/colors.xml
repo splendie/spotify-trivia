@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">@color/black_four</color>
+    <color name="colorPrimaryDark">@color/black</color>
+    <color name="colorAccent">@color/spotify_green</color>
+
+    <color name="transparent">#33ffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_90">#e5ffffff</color>
+    <color name="white_two">#dbdbdb</color>
+    <color name="white_three">#eaeaea</color>
+    <color name="silver">#babdbe</color>
+    <color name="silver_two">#c8c8ce</color>
+    <color name="light_grey">#edefed</color>
+    <color name="white_four">#fafafa</color>
+    <color name="white_six">#ededed</color>
+    <color name="pinkish_grey">#c8c8c8</color>
+    <color name="pinkish_grey_two">#bebebe</color>
+    <color name="pinkish_grey_three">#c3c3c3</color>
+    <color name="warm_grey_two">#9b9b9b</color>
+    <color name="warm_grey">#838383</color>
+    <color name="warm_grey_three">#7e7e7e</color>
+    <color name="steel_grey">#7a7b7b</color>
+    <color name="brownish_grey">#5d5d5d</color>
+    <color name="greyish_brown">#4a4a4a</color>
+    <color name="black_40">#66313131</color>
+    <color name="black_three">#333333</color>
+    <color name="black_50">#80313131</color>
+    <color name="black_two_12">#1f000000</color>
+    <color name="black_two_24">#3d000000</color>
+    <color name="black_two_26">#42000000</color>
+    <color name="black_two_40">#66000000</color>
+    <color name="black_two_54">#8a000000</color>
+    <color name="black_two_60">#99000000</color>
+    <color name="black_two_87">#dd000000</color>
+    <color name="black_four">#010101</color>
+    <color name="black">#000000</color>
+    <color name="duck_egg_blue">#ebf9fc</color>
+    <color name="weird_green">#3ce59d</color>
+    <color name="algae_green">#25d366</color>
+    <color name="spotify_green">#2EBD59</color>
+    <color name="apple_green">#7ed321</color>
+    <color name="dark_sky_blue_10">#1a3bc3e5</color>
+    <color name="dark_sky_blue_20">#333bc3e5</color>
+    <color name="dark_sky_blue_30">#4d3bc3e5</color>
+    <color name="dark_two">#263238</color>
+    <color name="dark">#20272b</color>
+    <color name="ice_blue">#f0fcff</color>
+    <color name="light_cyan">#aaeeff</color>
+    <color name="light_sky_blue">#c3f3ff</color>
+    <color name="light_blue">#8eddfb</color>
+    <color name="greeny_blue">#4cb5ab</color>
+    <color name="dark_sky_blue_two">#55acee</color>
+    <color name="tealish">#33abc7</color>
+    <color name="tealish_two">#26a6c5</color>
+    <color name="dark_sky_blue_80">#cc3bc3e5</color>
+    <color name="bluish">#1f8ca6</color>
+    <color name="dark_sky_blue_60">#993bc3e5</color>
+    <color name="light_navy">#1a6678</color>
+    <color name="denim_blue">#3b5998</color>
+    <color name="nice_blue">#1884af</color>
+    <color name="peacock_blue">#005c90</color>
+    <color name="pinkish_grey_four">#c0c0c0</color>
+    <color name="pastel_red">#ed6060</color>
+    <color name="coral">#f14b4b</color>
+    <color name="coral_two">#fb4040</color>
+    <color name="tomato">#ed4848</color>
+    <color name="tomato_two">#e94332</color>
+    <color name="pale_red">#d73d32</color>
+    <color name="maize">#f8bc59</color>
+    <color name="dull_orange">#daa12b</color>
+    <color name="squash">#f5a623</color>
+    <color name="mango">#ff9800</color>
+
+
+
+
 </resources>

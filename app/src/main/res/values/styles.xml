@@ -8,4 +8,32 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <!--No Toolbar Aplication theme-->
+    <style name="AppTheme.NoBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white_four</item>
+        <item name="windowActionBar">false</item>
+        <item name="actionModeBackground">@color/colorPrimary</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <!-- Transparent toolbar -->
+    <style name="AppTheme.Overlay" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <!--Buttons-->
+    <style name="Button.Primary" parent="android:Theme">
+        <item name="android:background">@drawable/button_corner_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:radius">@dimen/size_5dp</item>
+    </style>
 </resources>

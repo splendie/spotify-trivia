@@ -19,7 +19,7 @@
  * under the License.
  */
 
-package com.indri.musictrivia;
+package com.indri.musictrivia.modules;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -30,15 +30,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.indri.musictrivia.R;
+import com.indri.musictrivia.utils.Constants;
 import com.spotify.sdk.android.authentication.AuthenticationClient;
 import com.spotify.sdk.android.authentication.AuthenticationRequest;
 import com.spotify.sdk.android.authentication.AuthenticationResponse;
 
+import org.androidannotations.annotations.EActivity;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.Locale;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -46,12 +48,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity {
-
-    public static final String CLIENT_ID = "d836e2e435cd4ef3a619d05b14774d9c";
-    public static final String REDIRECT_URI = "musictrivia://callback";
-    public static final int AUTH_TOKEN_REQUEST_CODE = 0x10;
-    public static final int AUTH_CODE_REQUEST_CODE = 0x11;
+@EActivity(R.layout.activity_login)
+public class SplashActivity extends AppCompatActivity {
 
     private final OkHttpClient mOkHttpClient = new OkHttpClient();
     private String mAccessToken;
@@ -61,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle(String.format(
-                Locale.US, "Spotify Auth Sample %s", com.spotify.sdk.android.authentication.BuildConfig.VERSION_NAME));
     }
 
     @Override
@@ -108,16 +103,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onRequestCodeClicked(View view) {
         final AuthenticationRequest request = getAuthenticationRequest(AuthenticationResponse.Type.CODE);
-        AuthenticationClient.openLoginActivity(this, AUTH_CODE_REQUEST_CODE, request);
+        AuthenticationClient.openLoginActivity(this, Constants.AUTH_CODE_REQUEST_CODE, request);
     }
 
     public void onRequestTokenClicked(View view) {
         final AuthenticationRequest request = getAuthenticationRequest(AuthenticationResponse.Type.TOKEN);
-        AuthenticationClient.openLoginActivity(this, AUTH_TOKEN_REQUEST_CODE, request);
+        AuthenticationClient.openLoginActivity(this, Constants.AUTH_TOKEN_REQUEST_CODE, request);
     }
 
     private AuthenticationRequest getAuthenticationRequest(AuthenticationResponse.Type type) {
-        return new AuthenticationRequest.Builder(CLIENT_ID, type, getRedirectUri().toString())
+        return new AuthenticationRequest.Builder(Constants.CLIENT_ID, type, getRedirectUri().toString())
                 .setShowDialog(true)
                 .setScopes(new String[]{"user-read-email"})
                 .build();
@@ -128,10 +123,10 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         final AuthenticationResponse response = AuthenticationClient.getResponse(resultCode, data);
 
-        if (AUTH_TOKEN_REQUEST_CODE == requestCode) {
+        if (Constants.AUTH_TOKEN_REQUEST_CODE == requestCode) {
             mAccessToken = response.getAccessToken();
             updateTokenView();
-        } else if (AUTH_CODE_REQUEST_CODE == requestCode) {
+        } else if (Constants.AUTH_CODE_REQUEST_CODE == requestCode) {
             mAccessCode = response.getCode();
             updateCodeView();
         }

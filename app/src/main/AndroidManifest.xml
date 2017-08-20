@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
-            android:configChanges="keyboardHidden|keyboard|orientation|screenSize">
+            android:name=".modules.SplashActivity_"
+            android:theme="@style/AppTheme.NoBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
