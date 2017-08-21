@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.indri.musictrivia">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,22 +12,21 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".modules.SplashActivity_"
+            android:name=".modules.login.LoginActivity_"
             android:theme="@style/AppTheme.NoBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!--Spotify's Login Activity-->
         <activity
-            android:launchMode="singleInstance"
             android:name="com.spotify.sdk.android.authentication.LoginActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
 
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-
 
 </manifest>

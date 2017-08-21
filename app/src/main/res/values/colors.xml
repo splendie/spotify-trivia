@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">@color/black</color>
     <color name="colorAccent">@color/spotify_green</color>
 
-    <color name="transparent">#33ffffff</color>
+    <color name="transparent">#22c8c8ce</color>
 
     <color name="white">#ffffff</color>
     <color name="white_90">#e5ffffff</color>

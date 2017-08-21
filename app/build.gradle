@@ -14,6 +14,24 @@ buildscript {
         classpath 'me.tatarka:gradle-retrolambda:3.6.1'
     }
 }
+loadProperties("config.properties")
+
+def loadProperties(String sourceFileName) {
+    def config = new Properties()
+    def propFile = new File(sourceFileName)
+    if (propFile.canRead()) {
+        System.out.println("Loading property file: " + propFile.absolutePath)
+        config.load(new FileInputStream(propFile))
+        for (Map.Entry property in config) {
+            System.out.println("setting " + property.key)
+            project.ext[property.key] = property.value;
+        }
+        return true;
+    } else {
+        System.err.println("Couldn't load property file: " + propFile.absolutePath)
+        return false;
+    }
+}
 
 android {
     compileSdkVersion 25
@@ -25,6 +43,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        resValue "string", "CLIENT_ID", project.ext.get("CLIENT_ID")
+        resValue "string", "REDIRECT_URI", project.ext.get("REDIRECT_URI")
+        resValue "string", "REDIRECT_SCHEME", project.ext.get("REDIRECT_SCHEME")
+        resValue "string", "REDIRECT_HOST", project.ext.get("REDIRECT_HOST")
     }
     buildTypes {
         release {
