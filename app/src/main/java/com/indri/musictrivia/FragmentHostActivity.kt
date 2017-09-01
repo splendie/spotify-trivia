@@ -27,9 +27,7 @@ open class FragmentHostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (savedInstanceState != null) currentFragment = supportFragmentManager.getFragment(savedInstanceState, FRAGMENT_ARG) as BaseFragment
-        if (currentFragment != null) {
             changeFragment(currentFragment)
-        }
     }
 
     fun changeFragment(fragment: Fragment) {
