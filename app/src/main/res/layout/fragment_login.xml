@@ -42,23 +42,21 @@
             app:srcCompat="@drawable/ic_white"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/button_login"
-            app:layout_constraintVertical_bias="0.657" />
+            app:layout_constraintVertical_bias="0.779" />
 
         <TextView
             android:id="@+id/editText"
             style="@style/WhiteH1"
             android:layout_width="368dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="144dp"
+            android:layout_marginBottom="242dp"
             android:textAlignment="center"
             android:text="@string/app_name"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintRight_toRightOf="parent"
             tools:layout_constraintBottom_creator="1"
             tools:layout_constraintRight_creator="1"
-            android:layout_marginRight="0dp" />
-
-
+            android:layout_marginRight="8dp" />
 
     </android.support.constraint.ConstraintLayout>
 

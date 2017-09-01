@@ -7,15 +7,12 @@ import com.spotify.sdk.android.authentication.AuthenticationRequest
 /**
  * Created by Indri on 21/08/2017.
  */
-interface LoginContract {
+interface GenreContract {
 
     interface View: BaseView<Presenter> {
-        fun loginToSpotify()
     }
 
     interface Presenter: BasePresenter {
-        fun getTokenAuthenticationRequest(): AuthenticationRequest
-        fun getCodeAuthenticationRequest(): AuthenticationRequest
-
+        fun getPopularTracksByGenre(genre: String)
     }
 }

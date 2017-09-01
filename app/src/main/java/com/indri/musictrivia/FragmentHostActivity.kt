@@ -42,9 +42,7 @@ open class FragmentHostActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (currentFragment != null) {
             currentFragment!!.onActivityResult(requestCode, resultCode, data)
-        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

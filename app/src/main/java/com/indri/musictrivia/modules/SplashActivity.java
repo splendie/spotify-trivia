@@ -103,12 +103,12 @@
 //
 //    public void onRequestCodeClicked(View view) {
 //        final AuthenticationRequest request = getAuthenticationRequest(AuthenticationResponse.Type.CODE);
-//        AuthenticationClient.openLoginActivity(this, Constants.AUTH_CODE_REQUEST_CODE, request);
+//        AuthenticationClient.openLoginActivity(this, Constants.AUTH_CODE_REQUEST, request);
 //    }
 //
 //    public void onRequestTokenClicked(View view) {
 //        final AuthenticationRequest request = getAuthenticationRequest(AuthenticationResponse.Type.TOKEN);
-//        AuthenticationClient.openLoginActivity(this, Constants.AUTH_TOKEN_REQUEST_CODE, request);
+//        AuthenticationClient.openLoginActivity(this, Constants.AUTH_TOKEN_REQUEST, request);
 //    }
 //
 //    private AuthenticationRequest getAuthenticationRequest(AuthenticationResponse.Type type) {
@@ -123,10 +123,10 @@
 //        super.onActivityResult(requestCode, resultCode, data);
 //        final AuthenticationResponse response = AuthenticationClient.getResponse(resultCode, data);
 //
-//        if (Constants.AUTH_TOKEN_REQUEST_CODE == requestCode) {
+//        if (Constants.AUTH_TOKEN_REQUEST == requestCode) {
 //            mAccessToken = response.getAccessToken();
 //            updateTokenView();
-//        } else if (Constants.AUTH_CODE_REQUEST_CODE == requestCode) {
+//        } else if (Constants.AUTH_CODE_REQUEST == requestCode) {
 //            mAccessCode = response.getCode();
 //            updateCodeView();
 //        }

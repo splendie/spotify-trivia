@@ -1,6 +1,5 @@
 package com.indri.musictrivia.modules.login
 
-import android.app.Activity
 import android.content.Context
 import android.net.Uri
 import com.indri.musictrivia.R
@@ -18,11 +17,27 @@ class LoginPresenter constructor(val context: Context, val view: LoginContract.V
     lateinit var mAccessToken: String
     lateinit var mAccessCode: String
 
+    val scopes = arrayOf(
+            "playlist-read-private",
+            "user-library-read",
+            "user-top-read",
+            "user-read-email",
+            "user-read-private",
+            "user-follow-read"
+    )
+
 
     override fun getTokenAuthenticationRequest(): AuthenticationRequest {
         return AuthenticationRequest.Builder(context.getString(R.string.CLIENT_ID), AuthenticationResponse.Type.TOKEN, getRedirectUri().toString())
                 .setShowDialog(true)
-                .setScopes(arrayOf("user-read-email"))
+                .setScopes(scopes)
+                .build()
+    }
+
+    override fun getCodeAuthenticationRequest(): AuthenticationRequest {
+        return AuthenticationRequest.Builder(context.getString(R.string.CLIENT_ID), AuthenticationResponse.Type.CODE, getRedirectUri().toString())
+                .setShowDialog(true)
+                .setScopes(scopes)
                 .build()
     }
 
