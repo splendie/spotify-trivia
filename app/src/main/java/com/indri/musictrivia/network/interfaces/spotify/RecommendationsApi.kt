@@ -1,4 +1,4 @@
-package com.indri.musictrivia.network.spotify.interfaces
+package com.indri.musictrivia.network.interfaces.spotify
 
 import com.indri.musictrivia.models.spotify.Recommendations
 import retrofit2.http.GET

@@ -99,6 +99,12 @@ dependencies {
     compile 'com.github.pwittchen:reactivenetwork:0.9.1'
     compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
 
+    //DI libraries
+    compile 'com.google.dagger:dagger:2.2'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.2'
+    kapt 'com.google.dagger:dagger-compiler:2.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+
     // Network
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'

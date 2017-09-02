@@ -52,7 +52,7 @@ open class LoginFragment : BaseFragment(), LoginContract.View {
             when (response.type) {
                 AuthenticationResponse.Type.TOKEN -> {
                     mAccessToken = response.accessToken
-                    PrefUtil.put(PrefUtil.Key.KEY_SPOTIFY_TOKEN, mAccessToken)
+                    PrefUtil.put(PrefUtil.Key.KEY_SPOTIFY_ACCESS_TOKEN, mAccessToken)
                     GenreActivity_.intent(activity).start()
                 }
                 AuthenticationResponse.Type.CODE -> {

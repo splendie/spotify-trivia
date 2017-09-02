@@ -16,7 +16,7 @@ object PrefUtil {
     var editor: SharedPreferences.Editor = pref.edit()
 
     enum class Key {
-        KEY_SPOTIFY_TOKEN,
+        KEY_SPOTIFY_ACCESS_TOKEN,
         KEY_SPOTIFY_CODE,
     }
 
@@ -44,36 +44,36 @@ object PrefUtil {
         doCommit()
     }
 
-    fun getString(key: String, defaultValue: String): String {
-        return pref.getString(key, defaultValue)
+    fun getString(key: Key, defaultValue: String): String {
+        return pref.getString(key.name, defaultValue)
     }
 
-    fun getString(key: String): String {
-        return pref.getString(key, "")
+    fun getString(key: Key): String {
+        return pref.getString(key.name, "")
     }
 
-    fun getInt(key: String): Int {
-        return pref.getInt(key, 0)
+    fun getInt(key: Key): Int {
+        return pref.getInt(key.name, 0)
     }
 
-    fun getInt(key: String, defaultValue: Int): Int {
-        return pref.getInt(key, defaultValue)
+    fun getInt(key: Key, defaultValue: Int): Int {
+        return pref.getInt(key.name, defaultValue)
     }
 
-    fun getLong(key: String): Long {
-        return pref.getLong(key, 0)
+    fun getLong(key: Key): Long {
+        return pref.getLong(key.name, 0)
     }
 
-    fun getLong(key: String, defaultValue: Long): Long {
-        return pref.getLong(key, defaultValue)
+    fun getLong(key: Key, defaultValue: Long): Long {
+        return pref.getLong(key.name, defaultValue)
     }
 
-    fun getFloat(key: String): Float {
-        return pref.getFloat(key, 0F)
+    fun getFloat(key: Key): Float {
+        return pref.getFloat(key.name, 0F)
     }
 
-    fun getFloat(key: String, defaultValue: Float): Float {
-        return pref.getFloat(key, defaultValue)
+    fun getFloat(key: Key, defaultValue: Float): Float {
+        return pref.getFloat(key.name, defaultValue)
     }
 
     /**
