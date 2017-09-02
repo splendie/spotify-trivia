@@ -1,6 +1,8 @@
 package com.indri.musictrivia.network.interfaces.spotify
 
 import com.indri.musictrivia.models.spotify.Recommendations
+import io.reactivex.Observable
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
 
@@ -17,6 +19,6 @@ interface RecommendationsApi {
      * @return Recommendations response object
      */
     @GET("/recommendations")
-    fun getRecommendations(@QueryMap options: Map<String, Object>): Recommendations
+    fun getRecommendations(@QueryMap options: Map<String, Any>): Observable<Response<Recommendations>>
 
 }

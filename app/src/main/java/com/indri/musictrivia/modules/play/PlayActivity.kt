@@ -1,20 +1,20 @@
-package com.indri.musictrivia.modules.login
+package com.indri.musictrivia.modules.play
 
 import android.os.Bundle
 import com.indri.musictrivia.R
 import com.ruangguru.liveteachers.FragmentHostActivity
 import org.androidannotations.annotations.EActivity
-
-
+import javax.inject.Inject
 
 /**
- * Created by Indri on 21/08/2017.
+ * Created by Indri on 02/09/2017.
  */
 
 @EActivity(R.layout.fragment_host)
-open class LoginActivity: FragmentHostActivity() {
+open class PlayActivity: FragmentHostActivity(){
 
-    lateinit var presenter: LoginPresenter
+    @Inject
+    lateinit var presenter: PlayPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         initFragment()
@@ -22,11 +22,11 @@ open class LoginActivity: FragmentHostActivity() {
         initPresenter()
     }
 
-    fun initFragment(){
-        currentFragment = LoginFragment_.builder().build()
+    fun initFragment() {
+        currentFragment = PlayFragment_.builder().build()
     }
 
-    fun initPresenter(){
-        presenter = LoginPresenter(this, currentFragment as LoginContract.View)
+    fun initPresenter() {
+
     }
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_four"
+
+    grid:alignmentMode="alignBounds"
+    grid:columnCount="3"
+    grid:layout_gravity="fill_horizontal"
+
+    grid:useDefaultMargins="true">
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+    <include
+        layout="@layout/item_genre"
+        android:gravity="center"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill_horizontal"
+        grid:layout_rowWeight="1" />
+
+</android.support.v7.widget.GridLayout>

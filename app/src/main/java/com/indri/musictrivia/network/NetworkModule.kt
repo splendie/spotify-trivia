@@ -3,7 +3,6 @@ package com.indri.musictrivia.network
 import android.content.Context
 import android.os.Build
 import android.util.Log
-import com.indri.musictrivia.BuildConfig
 import com.indri.musictrivia.network.interceptors.SpotifyRequestAuthInterceptor
 import dagger.Module
 import dagger.Provides
@@ -12,7 +11,8 @@ import okhttp3.OkHttpClient
 import okhttp3.TlsVersion
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.ArrayList
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -81,7 +81,8 @@ class NetworkModule() {
         return Retrofit.Builder()
                 .client(okHttpClient)
                 .baseUrl(SPOTIFY_WEB_API_ENDPOINT)
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
     }
 }

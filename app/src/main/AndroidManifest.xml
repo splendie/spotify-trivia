@@ -23,7 +23,7 @@
         </activity>
 
         <activity android:name=".modules.login.GenreActivity_" />
-
+        <activity android:name=".modules.play.PlayActivity_" />
         <!--Spotify's Login Activity-->
         <activity
             android:name="com.spotify.sdk.android.authentication.LoginActivity"

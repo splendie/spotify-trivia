@@ -13,6 +13,5 @@ interface GenreContract {
     }
 
     interface Presenter: BasePresenter {
-        fun getPopularTracksByGenre(genre: String)
     }
 }

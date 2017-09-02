@@ -30,6 +30,6 @@ interface UserApi {
      * @see <a href="https://developer.spotify.com/web-api/get-users-profile/">Get User's Public Profile</a>
      */
     @GET("/users/{id}")
-    fun getUser(@Path("id") userId: String ): UserPublic
+    fun getUser(@Path("id") userId: String ): Observable<Response<UserPublic>>
 
 }
